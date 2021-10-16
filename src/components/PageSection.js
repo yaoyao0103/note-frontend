@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useReducer } from "react";
 import { Modal, Button } from "react-bootstrap";
 import { create_page } from "../api_utils";
 import PageDetail from "./PageDetail";
 
 export default function PageSection({ pages }) {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useReducer((show) => !show, false);
   const [name, setName] = useState("");
   const [isValid, setIsValid] = useState(true);
   const [error, setError] = useState("");
@@ -16,7 +16,7 @@ export default function PageSection({ pages }) {
     const response = await create_page(name);
     if (response.status === 200) {
       setName("");
-      setShow(false);
+      setShow();
       setError("");
     } else {
       setError(response.data);
@@ -26,7 +26,7 @@ export default function PageSection({ pages }) {
   const closeModal = () => {
     setName("");
     setError("");
-    setShow(false);
+    setShow();
   };
   return (
     <div className="my-2 d-flex flex-column">
@@ -41,7 +41,7 @@ export default function PageSection({ pages }) {
       <form id="create-page">
         <Modal
           show={show}
-          onHide={() => setShow(!show)}
+          onHide={setShow}
           backdrop="static"
           keyboard={false}
           aria-labelledby="contained-modal-title-vcenter"

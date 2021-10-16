@@ -38,7 +38,7 @@ const Editor = () => {
   useEffect(() => {
     const editor = geditorConfig(assets, pageId);
     setEditor(editor);
-  }, [pageId]);
+  }, [pageId, assets]);
   return (
     <div className="App">
       <div id="navbar" className="sidenav d-flex flex-column overflow-scroll">
