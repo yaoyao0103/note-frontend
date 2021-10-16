@@ -14,9 +14,14 @@ const Home = () => {
       setIsValid(false);
       return;
     }
-    const newPage = await create_page(name);
-    setName("");
-    setPages([...pages, newPage]);
+    const response = await create_page(name);
+    if (response.status === 200) {
+      setName("");
+      setPages([...pages, response.data]);
+      setError("");
+    } else {
+      setError(response.data);
+    }
   };
 
   useEffect(() => {
