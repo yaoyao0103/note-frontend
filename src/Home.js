@@ -9,6 +9,8 @@ const Home = () => {
   const [pages, setPages] = useState([]);
   const [error, setError] = useState("");
 
+  // const { loading, pages, error } = FetchPages();
+
   const handleSubmit = async () => {
     if (!name) {
       setIsValid(false);
