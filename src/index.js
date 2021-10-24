@@ -5,10 +5,13 @@ import "bootstrap";
 import App from "./App";
 import "./styles/main.scss";
 import reportWebVitals from "./reportWebVitals";
+import DataProvider from "./redux/store";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <DataProvider>
+      <App />
+    </DataProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
