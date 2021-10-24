@@ -1,15 +1,15 @@
-import axios from "axios";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { API_HOST, create_page } from "./api_utils";
+import { useSelector } from "react-redux";
+import { create_page } from "./api_utils";
 
 const Home = () => {
   const [name, setName] = useState("");
   const [isValid, setIsValid] = useState(true);
-  const [pages, setPages] = useState([]);
   const [error, setError] = useState("");
 
-  // const { loading, pages, error } = FetchPages();
+  const { pageStore } = useSelector((state) => state);
+  const { pages } = pageStore;
 
   const handleSubmit = async () => {
     if (!name) {
@@ -19,25 +19,11 @@ const Home = () => {
     const response = await create_page(name);
     if (response.status === 200) {
       setName("");
-      setPages([...pages, response.data]);
       setError("");
     } else {
       setError(response.data);
     }
   };
-
-  useEffect(() => {
-    async function getAllPages() {
-      try {
-        const response = await axios.get(`${API_HOST}pages/`);
-        setPages(response.data);
-      } catch (error) {
-        console.log("error :>> ", error);
-        setError(error.message);
-      }
-    }
-    getAllPages();
-  }, []);
 
   return (
     <div className="container">

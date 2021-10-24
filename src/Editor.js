@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import { useSelector } from "react-redux";
 import { API_HOST } from "./api_utils";
 import Sidebar from "./components/Sidebar";
 import TopNav from "./components/TopNav";
@@ -10,9 +11,10 @@ import PageSection from "./components/PageSection";
 const Editor = () => {
   const [editor, setEditor] = useState(null);
   const [assets, setAssets] = useState([]);
-  const [pages, setPages] = useState([]);
-  const [error, setError] = useState("");
   const { pageId } = useParams();
+
+  const { pageStore } = useSelector((state) => state);
+  const { pages } = pageStore;
 
   useEffect(() => {
     async function getAllAssets() {
@@ -23,15 +25,7 @@ const Editor = () => {
         setAssets(error.message);
       }
     }
-    async function getAllPages() {
-      try {
-        const response = await axios.get(`${API_HOST}pages/`);
-        setPages(response.data);
-      } catch (error) {
-        setError(error.message);
-      }
-    }
-    getAllPages();
+
     getAllAssets();
   }, []);
 
