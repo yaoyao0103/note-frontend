@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
-import { create_page } from "./api_utils";
+import { useSelector, useDispatch } from "react-redux";
+import { createPage } from "./redux/actions/pageAction";
 
 const Home = () => {
   const [name, setName] = useState("");
   const [isValid, setIsValid] = useState(true);
-  const [error, setError] = useState("");
+  const dispatch = useDispatch();
 
   const { pageStore } = useSelector((state) => state);
   const { pages } = pageStore;
@@ -16,13 +16,7 @@ const Home = () => {
       setIsValid(false);
       return;
     }
-    const response = await create_page(name);
-    if (response.status === 200) {
-      setName("");
-      setError("");
-    } else {
-      setError(response.data);
-    }
+    createPage(name)(dispatch);
   };
 
   return (
@@ -77,11 +71,6 @@ const Home = () => {
           </form>
         </div>
         <div className="col-12 my-2">
-          {error && (
-            <div role="alert" className="alert alert-primary">
-              {error}
-            </div>
-          )}
           <table className="table table-bordered table-hover">
             <thead>
               <tr>

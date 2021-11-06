@@ -1,6 +1,7 @@
 import React, { useState, useReducer } from "react";
+import { useDispatch } from "react-redux";
 import { Modal, Button } from "react-bootstrap";
-import { create_page } from "../api_utils";
+import { createPage } from "../redux/actions/pageAction";
 import PageDetail from "./PageDetail";
 
 export default function PageSection({ pages }) {
@@ -8,18 +9,16 @@ export default function PageSection({ pages }) {
   const [name, setName] = useState("");
   const [isValid, setIsValid] = useState(true);
   const [error, setError] = useState("");
+
+  const dispatch = useDispatch();
+
   const handleSubmit = async () => {
     if (!name) {
       setIsValid(false);
       return;
-    }
-    const response = await create_page(name);
-    if (response.status === 200) {
-      setName("");
-      setShow();
-      setError("");
     } else {
-      setError(response.data);
+      createPage(name)(dispatch);
+      closeModal();
     }
   };
 
