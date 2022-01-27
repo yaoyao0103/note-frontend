@@ -1,3 +1,4 @@
+import "./Page.css";
 function Sidebar() {
   return (
     <>

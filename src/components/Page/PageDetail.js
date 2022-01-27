@@ -1,3 +1,4 @@
+import "./Page.css";
 import { Link } from "react-router-dom";
 function PageDetail({ page }) {
   const { name } = page;

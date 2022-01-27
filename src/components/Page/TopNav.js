@@ -1,3 +1,4 @@
+import "./Page.css";
 function TopNav() {
   return (
     <nav className="navbar navbar-light">

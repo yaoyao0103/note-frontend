@@ -1,7 +1,8 @@
+import "./Page.css";
 import React, { useState, useReducer } from "react";
 import { useDispatch } from "react-redux";
 import { Modal, Button } from "react-bootstrap";
-import { createPage } from "../redux/actions/pageAction";
+import { createPage } from "../../redux/actions/pageAction";
 import PageDetail from "./PageDetail";
 
 export default function PageSection({ pages }) {

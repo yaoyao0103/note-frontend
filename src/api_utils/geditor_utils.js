@@ -428,7 +428,7 @@ export const panels = {
       buttons: [
         {
           id: "saveDb",
-          className: "fa fa-paper-plane btn-save",
+          className: "fa fa-floppy-o btn-save",
           command: "saveDb",
         },
         {

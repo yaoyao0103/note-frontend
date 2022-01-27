@@ -81,7 +81,7 @@ const Home = () => {
               </tr>
             </thead>
             <tbody>
-              {pages
+              { (pages.length!==0)
                 ? pages.map((page) => (
                     <tr key={page._id}>
                       <td>{page._id}</td>
