@@ -2,6 +2,7 @@ import grapesjs from "grapesjs";
 import gjsBlockBasic from "grapesjs-blocks-basic";
 import $ from "jquery";
 import grapesjsTyped from "grapesjs-typed"
+import tUIImageEditor from "grapesjs-tui-image-editor"
 import grapesjsBlockBootstrap from "grapesjs-blocks-bootstrap4";
 import grapesjsPluginExport from "grapesjs-plugin-export";
 import grapesjsStyleBg from "grapesjs-style-bg"
@@ -61,6 +62,7 @@ const geditorConfig = (assets, pageId) => {
       swiperComponent,
       codeComponent,
       grapesjsTyped,
+      tUIImageEditor,
       grapesjsBlockBootstrap,
       grapesjsPluginExport,
       grapesjsStyleBg,
@@ -70,9 +72,8 @@ const geditorConfig = (assets, pageId) => {
       gjsBlockBasic: {},
       swiperComponent: {},
       codeComponent: {},
-      grapesjsTyped: { label: "CodeEditor",
-      name: "CodeEditor",
-      category: "Custom",},
+      grapesjsTyped: {},
+      tUIImageEditor: {},
       grapesjsBlockBootstrap: {},
       grapesjsPluginExport: {},
       grapesjsStyleBg: {},

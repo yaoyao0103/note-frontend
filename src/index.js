@@ -6,7 +6,6 @@ import App from "./App";
 import "./styles/main.scss";
 import reportWebVitals from "./reportWebVitals";
 import DataProvider from "./redux/store";
-import CodeEditor from '@uiw/react-textarea-code-editor';
 
 ReactDOM.render(
   <React.StrictMode>
