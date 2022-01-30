@@ -8,6 +8,7 @@ import Sidebar from "../Page/Sidebar";
 import TopNav from "../Page/TopNav";
 import Navbar from "../Navbar/Navbar"
 import geditorConfig from "../../api_utils/geditor_config";
+import CodeEditor from '@uiw/react-textarea-code-editor';
 //import PageSection from "../Page/PageSection";
 
 const Editor = () => {

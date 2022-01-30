@@ -3,7 +3,9 @@ import gjsBlockBasic from "grapesjs-blocks-basic";
 import $ from "jquery";
 import grapesjsBlockBootstrap from "grapesjs-blocks-bootstrap4";
 import grapesjsPluginExport from "grapesjs-plugin-export";
-import grapesjsStyleBg from "grapesjs-style-bg";
+import grapesjsStyleBg from "grapesjs-style-bg"
+import CodeEditor from '@uiw/react-textarea-code-editor';
+
 
 import {
   addEditorCommand,
@@ -19,6 +21,7 @@ import {
 } from "./geditor_utils";
 import tailwindComponent from "../plugins/tailwind";
 import swiperComponent from "../plugins/swiper";
+import codeComponent from "../plugins/code";
 
 const geditorConfig = (assets, pageId) => {
   $(".panel__devices").html("");
@@ -55,6 +58,7 @@ const geditorConfig = (assets, pageId) => {
       tailwindComponent,
       gjsBlockBasic,
       swiperComponent,
+      codeComponent,
       grapesjsBlockBootstrap,
       grapesjsPluginExport,
       grapesjsStyleBg,
@@ -63,6 +67,7 @@ const geditorConfig = (assets, pageId) => {
       tailwindComponent: {},
       gjsBlockBasic: {},
       swiperComponent: {},
+      codeComponent: {},
       grapesjsBlockBootstrap: {},
       grapesjsPluginExport: {},
       grapesjsStyleBg: {},
