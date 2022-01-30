@@ -1,12 +1,20 @@
 import grapesjs from "grapesjs";
 import gjsBlockBasic from "grapesjs-blocks-basic";
 import $ from "jquery";
-import grapesjsTyped from "grapesjs-typed"
-import tUIImageEditor from "grapesjs-tui-image-editor"
+
+import typed from "grapesjs-typed";
+//import tUIImageEditor from "grapesjs-tui-image-editor";
+import styleGradient from "grapesjs-style-gradient";
+import tabs from "grapesjs-tabs";
+import ckeditor from "grapesjs-plugin-ckeditor";
+import tooltip from "grapesjs-tooltip";
+import countdown from "grapesjs-component-countdown";
+import lorySlider from "grapesjs-lory-slider";
+import styleFilter from "grapesjs-style-filter";
+
 import grapesjsBlockBootstrap from "grapesjs-blocks-bootstrap4";
 import grapesjsPluginExport from "grapesjs-plugin-export";
 import grapesjsStyleBg from "grapesjs-style-bg"
-import CodeEditor from '@uiw/react-textarea-code-editor';
 
 
 import {
@@ -24,6 +32,7 @@ import {
 import tailwindComponent from "../plugins/tailwind";
 import swiperComponent from "../plugins/swiper";
 import codeComponent from "../plugins/code";
+import tUIImageEditor from "../plugins/tUIImageEditor";
 
 const geditorConfig = (assets, pageId) => {
   $(".panel__devices").html("");
@@ -61,8 +70,13 @@ const geditorConfig = (assets, pageId) => {
       gjsBlockBasic,
       swiperComponent,
       codeComponent,
-      grapesjsTyped,
+      typed,
+      styleGradient,
+      tabs,
+      tooltip,
+      countdown,
       tUIImageEditor,
+      styleFilter,
       grapesjsBlockBootstrap,
       grapesjsPluginExport,
       grapesjsStyleBg,
@@ -72,8 +86,13 @@ const geditorConfig = (assets, pageId) => {
       gjsBlockBasic: {},
       swiperComponent: {},
       codeComponent: {},
-      grapesjsTyped: {},
+      typed: {},
+      styleGradient: {},
+      tabs: {},
+      tooltip: { blockTooltip: { label: 'Tooltip', category: 'Basic'}},
+      countdown: {},
       tUIImageEditor: {},
+      styleFilter: {},
       grapesjsBlockBootstrap: {},
       grapesjsPluginExport: {},
       grapesjsStyleBg: {},

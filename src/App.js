@@ -4,7 +4,6 @@ import { useDispatch } from "react-redux";
 import Home from "./Home";
 import Editor from "./components/Editor/Editor";
 import { pageLoad } from "./redux/actions/pageAction";
-import CodeEditor from '@uiw/react-textarea-code-editor';
 
 
 function App() {

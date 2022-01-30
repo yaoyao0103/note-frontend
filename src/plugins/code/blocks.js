@@ -1,5 +1,4 @@
 /* eslint-disable import/no-anonymous-default-export */
-import React, { useState } from 'react';
 export default (editor, opts = {}) => {
     const bm = editor.BlockManager;
     const style = `<style>

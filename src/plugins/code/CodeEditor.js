@@ -1,5 +1,5 @@
 import CodeEditor from '@uiw/react-textarea-code-editor';
-import React, { useState } from 'react'; 
+import React from 'react'; 
 
 const Code = () => {
   const [code, setCode] = React.useState(
