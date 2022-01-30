@@ -12,6 +12,7 @@
     "grapesjs-blocks-bootstrap4": "^0.2.3",
     "grapesjs-plugin-export": "^1.0.7",
     "grapesjs-style-bg": "^1.0.5",
+    "grapesjs-typed": "^1.0.5",
     "jquery": "^3.6.0",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.0-rc.1",
