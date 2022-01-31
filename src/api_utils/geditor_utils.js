@@ -185,7 +185,7 @@ export const styleManager = {
     {
       name: "Extra",
       open: false,
-      buildProps: ["transition", "perspective", "transform"],
+      buildProps: ["transition", "perspective", "transform", "filter"],
       properties: [
         {
           property: "transition",
@@ -206,6 +206,12 @@ export const styleManager = {
             { name: "Scale Z", property: "transform-scale-z" },
           ],
         },
+        {
+          name: 'Filter',
+          property: 'filter',
+          type: 'filter', // <- the new type
+          full: 1,
+        }
       ],
     },
     {
@@ -544,6 +550,8 @@ export const storageSetting = (pageId) => {
     storeCss: true,
     headers: {
       "Content-Type": "application/json",
+      'Access-Control-Allow-Origin': 'http://localhost:3000',
+      'Access-Control-Allow-Credentials': 'true'
     },
     id: "mycustom-",
     urlStore: `${API_HOST}pages/${pageId}/content`,

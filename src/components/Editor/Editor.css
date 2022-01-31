@@ -89,39 +89,34 @@
   min-width: 150px;
 }
 
-/** Assets **/
+/** Assets *
 .gjs-am-meta,
 .gjs-am-close,
 .gjs-am-file-uploader,
 .gjs-am-assets-header {
-  display: none;
+    display: none;
 }
 
 .gjs-am-assets-cont {
-  width: 100%;
+    width: 100%;
 }
 
 .gjs-am-assets {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .gjs-am-asset-image {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  display: contents;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: contents;
 }
 
 .gjs-am-preview-cont {
-  margin-top: 1rem;
+    margin-top: 1rem;
 }
-
+*/
 .gjs-block-label .fa {
   font-size: 25px;
 }
@@ -390,6 +385,10 @@
 
 .gjs-block-category.gjs-open .gjs-one-bg:hover {
   color: #7D7DFF;
+}
+
+#gjs-sm-add {
+  color: #777 !important;
 }
 
 .gjs-layer .gjs-layer-name {

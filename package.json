@@ -2,17 +2,29 @@
   "name": "react-grapesjs",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:8080",
   "dependencies": {
     "@popperjs/core": "^2.9.3",
+    "@toast-ui/react-image-editor": "^3.15.2",
+    "@uiw/react-textarea-code-editor": "^1.4.15",
     "axios": "^0.21.1",
     "bootstrap": "^5.1.1",
     "grapesjs": "^0.17.22",
     "grapesjs-blocks-basic": "^0.1.8",
     "grapesjs-blocks-bootstrap4": "^0.2.3",
+    "grapesjs-component-countdown": "^0.1.3",
+    "grapesjs-lory-slider": "^0.1.5",
+    "grapesjs-plugin-ckeditor": "^0.0.10",
     "grapesjs-plugin-export": "^1.0.7",
+    "grapesjs-preset-webpage": "^0.1.11",
     "grapesjs-style-bg": "^1.0.5",
+    "grapesjs-style-filter": "^0.1.3",
+    "grapesjs-style-gradient": "^2.0.14",
+    "grapesjs-tabs": "^1.0.6",
+    "grapesjs-tooltip": "^0.1.5",
+    "grapesjs-tui-image-editor": "^0.1.3",
+    "grapesjs-typed": "^1.0.5",
     "jquery": "^3.6.0",
-    "node-sass": "^6.0.1",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.0-rc.1",
     "react-dom": "^17.0.2",
@@ -47,5 +59,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "node-sass": "^5.0.0"
   }
 }

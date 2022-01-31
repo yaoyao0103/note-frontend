@@ -1,5 +1,5 @@
 #navbar {
-  position: fixed;
+  position: absolute;
   background-color: #f1f1ee;
   top: 0;
   width: 100%;

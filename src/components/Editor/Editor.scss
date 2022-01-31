@@ -84,7 +84,7 @@
     }
 }
 
-  /** Assets **/
+  /** Assets *
 .gjs-am-meta,
 .gjs-am-close,
 .gjs-am-file-uploader,
@@ -111,6 +111,7 @@
 .gjs-am-preview-cont {
     margin-top: 1rem;
 }
+*/
 .gjs-block-label {
     .fa {
         font-size: 25px;
@@ -350,6 +351,10 @@ margin-top: 10px;
 
 .gjs-block-category.gjs-open .gjs-one-bg:hover {
     color: #7D7DFF;
+}
+
+#gjs-sm-add{
+    color: #777 !important;
 }
 
 
