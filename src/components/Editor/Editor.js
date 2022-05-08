@@ -8,7 +8,6 @@ import Sidebar from "../Page/Sidebar";
 import TopNav from "../Page/TopNav";
 import Navbar from "../Navbar/Navbar"
 import geditorConfig from "../../api_utils/geditor_config";
-import ComponentDelete from "grapesjs/src/commands/view/ComponentDelete";
 //import PageSection from "../Page/PageSection";
 
 const Editor = () => {
@@ -18,6 +17,7 @@ const Editor = () => {
 
   const { pageStore } = useSelector((state) => state);
   const { pages } = pageStore;
+  var stompClient;
 
   useEffect(() => {
     async function getAllAssets() {
@@ -32,17 +32,16 @@ const Editor = () => {
     getAllAssets();
   }, []);
 
+
   useEffect(() => {
     const editor = geditorConfig(assets, pageId);
     setEditor(editor);
+    stompClient = editor.stompClient;
   }, [pageId, assets]);
 
   function print_test(){
-    let components = JSON.parse('[{"type":"text","attributes":{"id":"ismt2"},"components":[{"type":"textnode","content":"Insert your text here"}]}]');
-    let opts = new Object();
-    opts.components = components;
-    ComponentDelete.run(editor, null, opts);
   }
+
   return (
     
     <div className="App">
@@ -60,7 +59,7 @@ const Editor = () => {
         </div>
         <div className="main-content" id="main-content">
           <TopNav />
-          <input type="button" onClick={print_test} value = "delete-test"></input>
+          <input type="button" onClick={print_test} value = "test"></input>
           <div id="editor"></div>
           
         </div>

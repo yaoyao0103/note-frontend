@@ -34,7 +34,7 @@ import swiperComponent from "../plugins/swiper";
 import codeComponent from "../plugins/code";
 import tUIImageEditor from "../plugins/tUIImageEditor";
 
-const geditorConfig = (assets, pageId) => {
+async function geditorConfig(assets, pageId){
   $(".panel__devices").html("");
   $(".panel__basic-actions").html("");
   $(".panel__editor").html("");
